@@ -1,0 +1,24 @@
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png" width="30" height="30" class="d-inline-block align-top" alt="cao">
+      MyTodoApp
+    </a>
+    <ul class="navbar-nav">
+      <li><a routerLink="/welcome/peca" class="nav-link" *ngIf="hardcodedAuthenService.isUserLoggedIn()">Home</a></li>
+      <li><a routerLink="/todos" class="nav-link" *ngIf="hardcodedAuthenService.isUserLoggedIn()">Todos</a></li>
+    </ul>
+
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+      <li><a routerLink="/login" class="nav-link" *ngIf="!hardcodedAuthenService.isUserLoggedIn()">LogIn</a></li>
+      <li><a routerLink="/logout" class="nav-link" *ngIf="hardcodedAuthenService.isUserLoggedIn()">LogOut</a></li>
+    </ul>
+  </nav>
+
+
+
+
+</header>
+
+
